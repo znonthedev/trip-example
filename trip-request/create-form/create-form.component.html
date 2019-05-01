@@ -1,0 +1,29 @@
+<div class="form-div">
+  <form class="example-form" [formGroup]="tripForm">
+    <div class="location-grid">
+      <mat-form-field class="mat-input-wrapper pick" floatLabel="never">
+        <input
+          matInput
+          placeholder="Select a pickup point"
+          formControlName="pickUpPoint"
+          (click)="openBottomSheet(1)"
+          id="test"
+        />
+      </mat-form-field>
+      <mat-form-field class="mat-input-wrapper drop" floatLabel="never">
+        <input
+          matInput
+          placeholder="Select a Drop of point"
+          formControlName="dropOfPoint"
+          (click)="openBottomSheet(2)"
+          id="test"
+        />
+      </mat-form-field>
+      <button mat-mini-fab color="primary" class="swap">
+        <i class="material-icons">
+          compare_arrows
+        </i>
+      </button>
+    </div>
+  </form>
+</div>

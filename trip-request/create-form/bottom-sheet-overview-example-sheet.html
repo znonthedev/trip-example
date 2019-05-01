@@ -1,0 +1,33 @@
+<div class="form-div">
+  <form class="example-form" [formGroup]="tripForm">
+    <mat-form-field class="mat-input-wrapper" floatLabel="never">
+      <input
+        matInput
+        placeholder="Main Location"
+        formControlName="mainLocation"
+        [matAutocomplete]="auto"
+      />
+    </mat-form-field>
+    <mat-autocomplete #auto="matAutocomplete">
+      <mat-option *ngFor="let option of options" [value]="option">
+        {{ option }}
+      </mat-option>
+    </mat-autocomplete>
+    <mat-form-field class="mat-input-wrapper" floatLabel="never">
+      <input
+        matInput
+        placeholder="Sub Location"
+        formControlName="subLocation"
+        [matAutocomplete]="auto1"
+      />
+    </mat-form-field>
+    <mat-autocomplete #auto1="matAutocomplete">
+      <mat-option *ngFor="let option of options" [value]="option">
+        {{ option }}
+      </mat-option>
+    </mat-autocomplete>
+    <button mat-raised-button color="primary" (click)="openLink(event)">
+      Submit
+    </button>
+  </form>
+</div>
